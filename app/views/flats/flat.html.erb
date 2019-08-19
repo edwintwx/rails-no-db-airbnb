@@ -1,0 +1,12 @@
+<div class="main w-50 m-5 ">
+  <div class="row border p-3">
+  <h1><%= @flat["name"] %></h1>
+      <div class="flat">
+        <div class="flat-price font-weight-bold"><%= @flat["price"] %><%= @flat["priceCurrency"] %></div>
+        <div class="flat-img rounded mt-2"><img src="<%= @flat["imageUrl"] %>" alt="<% @flat["name"] %>" class="w-100"></div>
+      </div>
+    </div>
+  <div class="all bg-light mt-3">
+      <%= link_to "All flats", list_path %>
+  </div>
+</div>

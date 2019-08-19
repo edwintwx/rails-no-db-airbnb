@@ -1,0 +1,24 @@
+<div class="main w-50 m-5">
+  <h1>Listing of all my flats</h1>
+  <div class="row">
+    <div class="flats">
+      <% @flats_array.each do |flat| %>
+      <div class="flat border m-3">
+        <div class="flat-detail d-flex justify-content-between">
+          <div class="flat-name p-2">
+            <h4>
+              <a href="/flat/<%= flat["id"] %>" value="<%= flat["id"] %>" class="text-decoration-none">
+                <%= flat["name"] %>
+              </a>
+            </h4>
+          </div>
+          <div class="flat-price p-2 font-weight-bold"><%= flat["price"] %> <%= flat["priceCurrency"] %></div>
+        </div>
+        <div class="flat-img p-2"><img src="<%= flat["imageUrl"] %>" alt="<% flat["name"] %>" class="w-50 rounded"></div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
